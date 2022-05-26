@@ -4,16 +4,13 @@ function App() {
   console.log(data)
   // [{id:xxxxx, name:'xxx', birth: xxx}, ... ]
 
-  const studentData = data.map((v, i) => {
-    return <li>{v.name}</li>
-  })
-
-  console.log(studentData)
-  // [<li>{xxx}</li>, ... ]
-
   return (
     <>
-      <ul>{studentData}</ul>
+      <ul>
+        {data.map((v, i) => {
+          return <li key={v.id}>{v.name}</li>
+        })}
+      </ul>
     </>
   )
 }
