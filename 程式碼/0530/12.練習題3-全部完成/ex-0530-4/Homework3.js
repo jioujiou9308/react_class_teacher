@@ -136,12 +136,13 @@ function Homework3() {
           if (index > -1) {
             // 1. 從目前的狀態拷貝出一個新的變數值(陣列/物件)
              // 注意要深拷貝(deep clone)
+             // 參考: https://stackoverflow.com/questions/597588/how-do-you-clone-an-array-of-objects-in-javascript
             const newData = data.map((v) => {
               return { ...v }
             })
             // 另一種方式
             //const newData = JSON.parse(JSON.stringify(data))
-            
+
             // 2. 在新的變數值(陣列/物件)上作處理
             newData[index].text = 'cccc'
             // 3. 設定回原本的狀態中
