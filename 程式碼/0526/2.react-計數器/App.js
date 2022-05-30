@@ -1,7 +1,7 @@
-import React from 'react'
+import {useState} from 'react'
 
 function App() {
-  const [total, setTotal] = React.useState(0)
+  const [total, setTotal] = useState(0)
 
   return (
     <h1
