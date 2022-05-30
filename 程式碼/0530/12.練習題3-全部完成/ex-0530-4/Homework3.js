@@ -135,7 +135,13 @@ function Homework3() {
           // 有找到時(index !== -1)
           if (index > -1) {
             // 1. 從目前的狀態拷貝出一個新的變數值(陣列/物件)
-            const newData = [...data]
+             // 注意要深拷貝(deep clone)
+            const newData = data.map((v) => {
+              return { ...v }
+            })
+            // 另一種方式
+            //const newData = JSON.parse(JSON.stringify(data))
+            
             // 2. 在新的變數值(陣列/物件)上作處理
             newData[index].text = 'cccc'
             // 3. 設定回原本的狀態中
