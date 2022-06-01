@@ -33,6 +33,7 @@ function OrderList(props) {
               count={count}
               setCount={(newCount) => {
                 // 1. 從目前的狀態"拷貝"出一個新的變數值(陣列/物件)
+                // 注意要用map，因為要深拷貝到第一層的物件
                 const newProductsInOrder = productsInOrder.map((v) => {
                   return { ...v }
                 })
